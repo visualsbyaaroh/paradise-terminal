@@ -22,8 +22,6 @@ a {
   text-decoration: none;
 }
 
-/* HEADER */
-
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -51,8 +49,6 @@ nav a:hover,
 .work-row:hover {
   opacity: 0.45;
 }
-
-/* ARCHIVE */
 
 .archive {
   width: 100%;
@@ -97,8 +93,6 @@ nav a:hover,
   font-size: 14px;
 }
 
-/* INFO */
-
 .info {
   max-width: 520px;
 }
@@ -106,8 +100,6 @@ nav a:hover,
 .info p {
   margin: 0 0 18px;
 }
-
-/* PROJECT */
 
 .project {
   width: 100%;
@@ -133,7 +125,6 @@ nav a:hover,
 
 .project-title {
   margin: 0;
-
   font-size: 14px;
   font-weight: 400;
 }
@@ -145,16 +136,11 @@ nav a:hover,
 
 .project-image img {
   display: block;
-
   width: auto;
   max-width: min(100%, 1400px);
-
   height: auto;
-
   margin: 0 auto 80px;
 }
-
-/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -217,5 +203,4 @@ nav a:hover,
     width: 100%;
     max-width: 100%;
   }
-
 }
