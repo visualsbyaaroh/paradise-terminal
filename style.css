@@ -9,8 +9,8 @@ html {
 body {
   margin: 0;
   padding: 28px 32px 60px;
-  background: #ffffff;
-  color: #111111;
+  background: #fff;
+  color: #111;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
@@ -22,15 +22,13 @@ a {
   text-decoration: none;
 }
 
-
 /* HEADER */
 
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
-  margin-bottom: 135px;
+  margin-bottom: 130px;
 }
 
 .site-title {
@@ -49,10 +47,10 @@ nav a {
 }
 
 nav a:hover,
-.site-title:hover {
+.site-title:hover,
+.work-row:hover {
   opacity: 0.45;
 }
-
 
 /* ARCHIVE */
 
@@ -63,15 +61,10 @@ nav a:hover,
 
 .archive-label {
   padding-bottom: 10px;
-
   border-bottom: 1px solid #111;
 
   font-size: 11px;
   letter-spacing: 0.04em;
-}
-
-.archive-list {
-  width: 100%;
 }
 
 .work-row {
@@ -88,13 +81,9 @@ nav a:hover,
   min-height: 48px;
   padding: 15px 0;
 
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #ddd;
 
   transition: opacity 0.15s ease;
-}
-
-.work-row:hover {
-  opacity: 0.4;
 }
 
 .work-number,
@@ -106,14 +95,11 @@ nav a:hover,
 
 .work-title {
   font-size: 14px;
-  letter-spacing: 0.01em;
 }
-
 
 /* INFO */
 
 .info {
-  width: 100%;
   max-width: 520px;
 }
 
@@ -121,8 +107,7 @@ nav a:hover,
   margin: 0 0 18px;
 }
 
-
-/* PROJECT PAGE */
+/* PROJECT */
 
 .project {
   width: 100%;
@@ -151,17 +136,11 @@ nav a:hover,
 
   font-size: 14px;
   font-weight: 400;
-  letter-spacing: 0.01em;
 }
 
 .project-year,
 .project-type {
   font-size: 11px;
-  letter-spacing: 0.025em;
-}
-
-.project-image {
-  width: 100%;
 }
 
 .project-image img {
@@ -169,13 +148,11 @@ nav a:hover,
 
   width: auto;
   max-width: min(100%, 1400px);
-  max-height: none;
-
-  margin: 0 auto;
 
   height: auto;
-}
 
+  margin: 0 auto 80px;
+}
 
 /* MOBILE */
 
@@ -186,7 +163,7 @@ nav a:hover,
   }
 
   .site-header {
-    margin-bottom: 80px;
+    margin-bottom: 75px;
   }
 
   .site-title {
@@ -209,7 +186,6 @@ nav a:hover,
   .work-type {
     grid-column: 2;
     margin-top: 4px;
-
     opacity: 0.5;
   }
 
@@ -223,14 +199,12 @@ nav a:hover,
     font-size: 12px;
   }
 
-
   .project-meta {
     grid-template-columns:
       minmax(0, 1fr)
       45px;
 
     row-gap: 5px;
-
     margin-bottom: 35px;
   }
 
