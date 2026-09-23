@@ -8,7 +8,8 @@ html {
 
 body {
   margin: 0;
-  padding: 28px 32px 60px;
+  padding: 28px 32px 70px;
+
   background: #fff;
   color: #111;
 
@@ -22,11 +23,15 @@ a {
   text-decoration: none;
 }
 
+
+/* HEADER */
+
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 130px;
+
+  margin-bottom: 120px;
 }
 
 .site-title {
@@ -44,54 +49,84 @@ nav a {
   font-size: 12px;
 }
 
-nav a:hover,
 .site-title:hover,
-.work-row:hover {
+nav a:hover {
   opacity: 0.45;
 }
 
-.archive {
-  width: 100%;
-  max-width: 1250px;
-}
 
-.archive-label {
+/* GALLERY */
+
+.gallery-heading {
   padding-bottom: 10px;
+  margin-bottom: 28px;
+
   border-bottom: 1px solid #111;
 
   font-size: 11px;
   letter-spacing: 0.04em;
 }
 
-.work-row {
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 72px 32px;
+
+  width: 100%;
+}
+
+.gallery-item {
+  min-width: 0;
+}
+
+.gallery-item > a {
+  display: block;
+}
+
+.gallery-item img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  transition: opacity 0.2s ease;
+}
+
+.gallery-item > a:hover img {
+  opacity: 0.75;
+}
+
+
+/* GALLERY METADATA */
+
+.gallery-meta {
   display: grid;
 
   grid-template-columns:
-    70px
-    minmax(250px, 1fr)
-    100px
-    170px;
+    45px
+    minmax(0, 1fr)
+    50px
+    120px;
+
+  gap: 10px;
 
   align-items: baseline;
 
-  min-height: 48px;
-  padding: 15px 0;
+  padding-top: 10px;
 
-  border-bottom: 1px solid #ddd;
-
-  transition: opacity 0.15s ease;
-}
-
-.work-number,
-.work-year,
-.work-type {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.025em;
 }
 
-.work-title {
-  font-size: 14px;
+.gallery-title {
+  font-size: 11px;
 }
+
+
+/* INFO */
 
 .info {
   max-width: 520px;
@@ -100,6 +135,9 @@ nav a:hover,
 .info p {
   margin: 0 0 18px;
 }
+
+
+/* INDIVIDUAL PROJECT PAGE */
 
 .project {
   width: 100%;
@@ -125,6 +163,7 @@ nav a:hover,
 
 .project-title {
   margin: 0;
+
   font-size: 14px;
   font-weight: 400;
 }
@@ -136,16 +175,22 @@ nav a:hover,
 
 .project-image img {
   display: block;
+
   width: auto;
   max-width: min(100%, 1400px);
+
   height: auto;
+
   margin: 0 auto 80px;
 }
+
+
+/* MOBILE */
 
 @media (max-width: 700px) {
 
   body {
-    padding: 20px 18px 40px;
+    padding: 20px 18px 45px;
   }
 
   .site-header {
@@ -160,29 +205,24 @@ nav a:hover,
     font-size: 11px;
   }
 
-  .work-row {
+  .gallery {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .gallery-meta {
     grid-template-columns:
-      40px
+      35px
       minmax(0, 1fr)
-      45px;
+      42px;
 
-    padding: 14px 0;
+    row-gap: 4px;
   }
 
-  .work-type {
+  .gallery-meta span:last-child {
     grid-column: 2;
-    margin-top: 4px;
     opacity: 0.5;
-  }
-
-  .work-number,
-  .work-year,
-  .work-type {
-    font-size: 10px;
-  }
-
-  .work-title {
-    font-size: 12px;
   }
 
   .project-meta {
@@ -191,6 +231,7 @@ nav a:hover,
       45px;
 
     row-gap: 5px;
+
     margin-bottom: 35px;
   }
 
@@ -203,4 +244,5 @@ nav a:hover,
     width: 100%;
     max-width: 100%;
   }
+
 }
