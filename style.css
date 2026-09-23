@@ -69,7 +69,9 @@ nav a:hover {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
 
   gap: 64px 28px;
 
@@ -82,6 +84,7 @@ nav a:hover {
 
 .gallery-item > a {
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -115,7 +118,7 @@ nav a:hover {
     40px
     minmax(0, 1fr)
     45px
-    105px;
+    115px;
 
   gap: 8px;
 
@@ -124,11 +127,16 @@ nav a:hover {
   padding-top: 10px;
 
   font-size: 9px;
+
   letter-spacing: 0.025em;
 }
 
 .gallery-title {
   font-size: 10px;
+}
+
+.image-resolution {
+  white-space: nowrap;
 }
 
 
@@ -175,8 +183,12 @@ nav a:hover {
 }
 
 .project-year,
-.project-type {
+.project-resolution {
   font-size: 11px;
+}
+
+.project-resolution {
+  white-space: nowrap;
 }
 
 .project-image img {
@@ -211,6 +223,9 @@ nav a:hover {
     font-size: 11px;
   }
 
+
+  /* Keep phone gallery as one column */
+
   .gallery {
     grid-template-columns: 1fr;
 
@@ -224,8 +239,10 @@ nav a:hover {
   .gallery-item img {
     width: 100%;
     max-width: 100%;
+
     max-height: none;
   }
+
 
   .gallery-meta {
     grid-template-columns:
@@ -242,10 +259,14 @@ nav a:hover {
     font-size: 11px;
   }
 
-  .gallery-meta span:last-child {
+  .gallery-meta .image-resolution {
     grid-column: 2;
+
     opacity: 0.5;
   }
+
+
+  /* PROJECT */
 
   .project-meta {
     grid-template-columns:
@@ -257,8 +278,9 @@ nav a:hover {
     margin-bottom: 35px;
   }
 
-  .project-type {
+  .project-resolution {
     grid-column: 1;
+
     opacity: 0.5;
   }
 
